@@ -1,8 +1,3 @@
-// ArduCAM demo (C)2017 Lee
-// Web: http://www.ArduCAM.com
-// This program is a demo of how to use most of the functions
-// of the library with a supported camera modules, and can run on any Arduino platform.
-//
 // This demo was made for Omnivision 2MP/5MP sensor.
 // It will run the ArduCAM 2MP/5MP as a real 2MP/5MP digital camera, provide both JPEG capture.
 // The demo sketch will do the following tasks:
@@ -16,14 +11,14 @@
 #include <ESP8266WiFi.h>
 
 #ifndef STASSID
-#define STASSID "Publica 2.4G"
-#define STAPSK  "ilovehelveticamedium"
+#define STASSID "your-ssid"
+#define STAPSK  "your-password"
 #endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "nodes.ezequielfernandez.com";
+const char* host = "ezequielfernandez.com";
 const uint16_t port = 80;
 
 
@@ -251,7 +246,7 @@ int foo = 0;
 
 unsigned long lastTrigger = 0;
 void loop() {
-
+  // test it!
   if(foo == 0){
     foo = 1;
     sendPhotoToServer();
